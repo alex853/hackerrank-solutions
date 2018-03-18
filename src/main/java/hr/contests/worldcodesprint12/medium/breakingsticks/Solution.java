@@ -1,12 +1,8 @@
-package hr.algorithms.medium.breakingsticks;
+package hr.contests.worldcodesprint12.medium.breakingsticks;
 
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
-public class Solution2 {
-
-    static Map<Long, Long> cache = new HashMap<>();
+public class Solution {
 
     static long longestSequence(long[] a) {
         //  Return the length of the longest possible sequence of moves.
@@ -17,41 +13,38 @@ public class Solution2 {
         return sum;
     }
 
-    private static long eatOrSplit(long size) {
-        Long cachedResult = cache.get(size);
-        if (cachedResult != null) {
-            return cachedResult;
-        }
-
-        if (size == 1) {
-            cache.put(size, 1L);
+    private static long eatOrSplit(long length) {
+        if (length == 1) {
             return 1; // eat it
         }
 
-        long bestSum = 1 + size;
 
-        for (long i = 2; i <= Math.sqrt(size); i++) {
-            if (size % i != 0) {
-                continue;
-            }
 
-            long currCount = i;
-            long currSize = size / currCount;
-            long currSum = currCount * eatOrSplit(currSize) + 1;
-            if (currSum > bestSum) {
-                bestSum = currSum;
-            }
+        long newStickLength = maxDivider_bruteforce(length);
+        long newStickCount = length / newStickLength;
 
-            currSize = i;
-            currCount = size / currSize;
-            currSum = currCount * eatOrSplit(currSize) + 1;
-            if (currSum > bestSum) {
-                bestSum = currSum;
+        return newStickCount * eatOrSplit(newStickLength) + 1;
+    }
+
+    private static long minDivider_bruteforce(long n) {
+        for (long i = 2; i <= n/2; i++) {
+            long remainder = n % i;
+            if (remainder == 0) {
+                return i;
             }
         }
+        return 1;
+    }
 
-        cache.put(size, bestSum);
-        return bestSum;
+    private static long maxDivider_bruteforce(long n) {
+        long start = n/2;
+        for (long i = start; i >= 1; i--) {
+            long remainder = n % i;
+            if (remainder == 0) {
+                return i;
+            }
+        }
+        return 1;
     }
 
     public static void main(String[] args) {
@@ -68,24 +61,17 @@ public class Solution2 {
 
 
         check(longestSequence(new long[] {1L}), 1);
-        check(longestSequence(new long[] {2L}), 3);
-        check(longestSequence(new long[] {3L}), 4);
-        check(longestSequence(new long[] {4L}), 7);
-        check(longestSequence(new long[] {5L}), 6);
         check(longestSequence(new long[] {6L}), 10);
         check(longestSequence(new long[] {7L}), 8);
         check(longestSequence(new long[] {15L}), 21);
         check(longestSequence(new long[] {24L}), 46);
         check(longestSequence(new long[] {100L}), 181);
 
+
         check(longestSequence(new long[] {1L, 7L, 24L}), 55);
 
         System.out.println(new Date());
         System.out.println(longestSequence(new long[] {112364342349L}));
-        System.out.println(new Date());
-        for (int i = 1; i <= 100; i++) {
-            System.out.println(longestSequence(new long[]{9999990000001L}));
-        }
         System.out.println(new Date());
     }
 

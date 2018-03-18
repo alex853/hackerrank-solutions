@@ -1,4 +1,4 @@
-package hr.algorithms.medium.shortestpath;
+package hr.contests.worldcodesprint12.medium.shortestpath;
 
 public class Solution {
 

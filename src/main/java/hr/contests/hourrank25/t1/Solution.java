@@ -1,4 +1,4 @@
-package hr.hr25.t1;
+package hr.contests.hourrank25.t1;
 
 import java.io.ByteArrayInputStream;
 import java.util.Scanner;

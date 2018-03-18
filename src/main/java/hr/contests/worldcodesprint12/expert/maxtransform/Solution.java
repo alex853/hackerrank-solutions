@@ -1,4 +1,4 @@
-package hr.algorithms.expert.maxtransform;
+package hr.contests.worldcodesprint12.expert.maxtransform;
 
 import java.util.*;
 

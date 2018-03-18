@@ -1,4 +1,4 @@
-package hr.algorithms.medium.factorialarray;
+package hr.contests.worldcodesprint12.medium.factorialarray;
 
 import java.io.*;
 import java.util.*;

@@ -1,4 +1,4 @@
-package hr.algorithms.medium.breakingsticks;
+package hr.contests.worldcodesprint12.medium.breakingsticks;
 
 import java.util.*;
 

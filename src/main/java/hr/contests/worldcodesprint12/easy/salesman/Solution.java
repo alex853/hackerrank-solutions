@@ -1,4 +1,4 @@
-package hr.algorithms.easy.salesman;
+package hr.contests.worldcodesprint12.easy.salesman;
 
 import java.util.*;
 
