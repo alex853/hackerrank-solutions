@@ -1,6 +1,4 @@
-package hr.algo.medium.shortestpath;
-
-import java.util.Scanner;
+package hr.algorithms.medium.shortestpath;
 
 public class Solution {
 

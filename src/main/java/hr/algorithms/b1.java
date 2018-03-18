@@ -1,6 +1,4 @@
-package hr.algo;
-
-import java.util.Arrays;
+package hr.algorithms;
 
 /**
  * Created by User on 19.12.2017.

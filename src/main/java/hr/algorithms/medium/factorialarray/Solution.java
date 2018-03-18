@@ -1,10 +1,7 @@
-package hr.algo.medium.factorialarray;
+package hr.algorithms.medium.factorialarray;
 
 import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class Solution {
 

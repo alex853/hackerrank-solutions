@@ -1,4 +1,4 @@
-package hr.algo.easy.salesman;
+package hr.algorithms.easy.salesman;
 
 import java.util.*;
 

@@ -1,10 +1,6 @@
-package hr.algo.expert.maxtransform;
+package hr.algorithms.expert.maxtransform;
 
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class Solution {
 

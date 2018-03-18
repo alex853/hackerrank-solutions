@@ -1,4 +1,4 @@
-package hr.algo.medium.factorialarray;
+package hr.algorithms.medium.factorialarray;
 
 import java.util.HashMap;
 import java.util.Map;

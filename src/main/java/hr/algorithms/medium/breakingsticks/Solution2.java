@@ -1,4 +1,4 @@
-package hr.algo.medium.breakingsticks;
+package hr.algorithms.medium.breakingsticks;
 
 import java.util.Date;
 import java.util.HashMap;
