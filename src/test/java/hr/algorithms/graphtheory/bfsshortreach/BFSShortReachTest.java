@@ -28,4 +28,28 @@ public class BFSShortReachTest {
 
         assertArrayEquals(new int[]{-1, 6}, result);
     }
+
+    @Test
+    public void testCase7_1() {
+        int n = 4;
+        int m = 2;
+        int[][] edges = {{1, 2}, {1, 3}};
+        int s = 1;
+
+        int[] result = BFSShortReach.bfs(n, m, edges, s);
+
+        assertArrayEquals(new int[]{6, 6, -1}, result);
+    }
+
+    @Test
+    public void testCase7_2() {
+        int n = 3;
+        int m = 1;
+        int[][] edges = {{2, 3}};
+        int s = 2;
+
+        int[] result = BFSShortReach.bfs(n, m, edges, s);
+
+        assertArrayEquals(new int[]{-1, 6}, result);
+    }
 }
