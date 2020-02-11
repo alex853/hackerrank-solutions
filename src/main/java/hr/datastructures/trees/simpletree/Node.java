@@ -10,4 +10,9 @@ public class Node {
         left = null;
         right = null;
     }
+
+    @Override
+    public String toString() {
+        return "Node {" + data + ", left " + (left != null ? left.data : "NULL") + ", right " + (right != null ? right.data : "NULL") + "}";
+    }
 }
