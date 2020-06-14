@@ -1,4 +1,4 @@
-package lt.problem472_concatenated_words_hard;
+package lt.problem_472_concatenated_words_hard;
 
 import java.util.*;
 
